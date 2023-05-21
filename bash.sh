@@ -1,5 +1,5 @@
 function sign {
-    local gpg_id= "$1"
+    local gpg_id="$1"
     
      git config --global user.signingkey "$gpg_id"
   git config --global commit.gpgsign true
@@ -49,19 +49,4 @@ else
 echo "Enter a number in the given range"
 fi
 done
-
-
-
-
-
-echo "enter the gpg id of the key you want to sign"
-read gpgkeyid
-sign "gpgkeyid"
-
-else
-echo "Enter a number in the given range"
-fi
-done
-
-
 
